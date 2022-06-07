@@ -28,6 +28,9 @@ If you have completed this activity, work through the following challenge with y
 
 * Which command do you use to copy or move files?
 
+cp <source> <destination>
+mv <source> <destination>
+
 Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
