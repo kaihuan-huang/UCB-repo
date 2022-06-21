@@ -1,3 +1,11 @@
+:root{
+--light:#fff;
+--text-align:center;
+--display:flex;
+--flex-wrap:wrap;
+--dark:#13293d;
+}
+
 body {
   font-size: 16px;
   display: flex;
@@ -18,48 +26,49 @@ h2 {
 
 header {
   padding: 40px;
-  text-align: center;
-  background: #13293d;
-  color: #fff;
+  text-align: var(--text-align);
+  background:var(--light);
+  color: var(--color);
+
 }
 
 nav {
-  display: flex;
+  display:var(--display);
   background-color: #d8a47f;
 }
 
 nav a {
-  color: #13293d;
+  color: var(--light);
   padding: 14px 20px;
   text-decoration: none;
-  text-align: center;
+  text-align:var(--text-align);
 }
 
 nav a:hover {
-  background-color: #fff;
+  background-color:var(--color);
 }
 
 main {
-  display: flex;
-  flex-wrap: wrap;
+  display:var(--display);
+  flex-wrap: var(--flex-wrap)
 }
 
 footer {
   width: 100%;
   bottom: 0;
   padding: 20px;
-  text-align: center;
-  background: #13293d;
-  color: #fff;
+  text-align: var(--text-align);
+  background:var(--light);
+  color: var(--color);
   margin-top: auto;
 }
 
 .products {
   flex: 1;
-  background-color: #fff;
+  background-color: var(--color);
   padding: 50px;
-  display: flex;
-  flex-wrap: wrap;
+  display: var(--display);
+  flex-wrap:var(--flex-wrap);
   justify-content: space-evenly;
 }
 

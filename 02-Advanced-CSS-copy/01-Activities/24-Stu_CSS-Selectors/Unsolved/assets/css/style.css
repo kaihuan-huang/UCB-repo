@@ -60,6 +60,16 @@ article ul {
   list-style: circle;
 }
 
+ /* article ul li :nth-child(2) a[href=".css"]::after{
+  content:"😀";
+  display: inline;
+  margin-right: 3px;
+} 
+ */
+
+
+
+
 footer {
   display: flex;
   justify-content: center;
@@ -69,7 +79,12 @@ footer {
 }
 
 /* TODO: Add code here to select all <a> elements that link to a file with a `.css` extension */
-
+/*  */
+a[href]::after{
+  content:'😀';
+  display: inline;
+  margin-right: 3px;
+}
 @media screen and (max-width: 768px) {
   header {
     flex-direction: column;

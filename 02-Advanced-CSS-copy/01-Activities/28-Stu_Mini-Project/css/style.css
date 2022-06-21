@@ -1,0 +1,37 @@
+/* * {
+    box-sizing: border-box;
+  } */
+.container{
+    margin: 2px;
+    padding:2px;
+    display: flex;
+    border:2px red solid;
+}
+
+.row3{
+    background-color: gray;
+    padding: 1px 2px;
+    display: inline-block;
+    flex-direction: row;
+    flex-basis: 30%;
+    justify-content: space-between;
+    border: :2px solid ;
+
+
+}
+.row:nth-child(1){background-color: blueviolet;}
+.row:nth-child(2){background-color: blueviolet;}
+.row:nth-child(3){background-color: blueviolet;}
+
+header{
+  background-color: rgb(186, 50, 50);
+}
+
+section{
+    background-color: gray;
+}
+
+footer{
+    background-color: gray;
+} 
+  
