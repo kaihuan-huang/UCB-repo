@@ -25,12 +25,12 @@ console.log(typeof myNumberInt);
 console.log(typeof true);
 
 // Logs string
-console.log(typeof "Howdy");
+console.log('typeof "Howdy"',typeof "Howdy");
 
 // Pro-tip: JavaScript is loosely typed, so the type is tied to the value held in the variable, not the variable itself!
 // Logs number
 var myVariable = 33;
-console.log(typeof myVariable);
+console.log('typeof myVariable',typeof myVariable);
 
 // myVariable is reassigned; Logs boolean
 myVariable = false;

@@ -1,0 +1,209 @@
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+}
+
+html{
+    font-size: 65%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+body{
+    background-color: #EDF6E5;
+    padding: 100px 0 0 0;
+
+}
+
+
+.container{
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    
+ 
+    
+}
+
+ header{
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-weight: bold;
+    position:fixed;
+    top: 0;
+    /* 保持在顶部 */
+    z-index: 1400;
+    width: 100%;
+    height:5rem;
+    background-color:#B5EAEA;
+    /* 背景过滤器，模糊*/
+    /* backdrop-filter: blur(5rem); */
+
+}
+a{
+    position: relative;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+.navbar{
+    color: #F38BA0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-end;
+    margin: 0 -1rem; 
+}
+
+ul{
+    display:inline-flex;
+    justify-content: center;
+    right: 0px; 
+}
+
+li{
+    display: flex;
+    justify-content: flex-end;
+    padding: 2rem;
+}
+
+.nav-link:hover{
+    opacity: .5 ;
+    box-shadow: inset 0px 0px 8px #EDF6E5, 0 0 15px #EDF6E5;
+}
+
+em{
+    color: #FFBCBC;
+
+}
+
+.aboutme{
+    margin: 2rem;
+    padding: 2rem;
+    text-align: center;
+    background-color: #fff;
+    color:#F38BA0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+article{
+    background-color:#B5EAEA;
+}
+
+
+
+p{
+    color: #F38BA0;
+}
+
+.work{
+    margin: 2rem;
+    padding: 2rem;
+    text-align: center;
+    background-color: #fff;
+    color:#F38BA0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.img-container{
+    background-color:#EDF6E5;
+}
+video{
+    width:500px;
+    height:350px;
+    border: 1rem #B5EAEA;
+}
+
+
+img{
+    width: 500px;
+    height:350px;
+    
+   
+}
+
+.projects {
+    display: -ms-grid;
+    grid-template-columns: repeat(auto-fit, minmax(px, 1fr));
+    
+
+    
+} 
+
+image{
+    transition: 
+        transform 750ms cubic-bezier(.5,0,.5,1),
+        opacity 250ms linear;
+}
+
+image:hover{
+    
+    transform: scale(1.2);
+    opacity: .5;
+}
+
+#resume{
+   
+    color: #B5EAEA;
+}
+
+
+
+#contactme{
+  
+    font-size: 2rem;
+    line-height: 1.5;
+    font-weight: bold;
+    color:#B5EAEA;
+    
+}
+
+.social-icon{
+    font-size: 2rem;
+    color: #F38BA0;
+    margin: 20px 10px;
+    box-align:center;
+}
+
+.footer{
+    margin: 1.5rem;
+    text-align: center;
+    background-color: #fff;
+    color:#F38BA0;
+    display: flex;
+    justify-content: center;
+  
+}
+
+
+
+@media (max-width: 1028px) {
+    .img-container{ 
+        flex: 0 0 33.333%;
+        max-width: 33.333%;}
+}
+
+
+@media (max-width: 768px) {
+    .img-container{
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    
+}
+
+@media (max-width: 375px) {
+    
+
+    }
+
+

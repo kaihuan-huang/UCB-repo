@@ -1,4 +1,7 @@
+
 // TODO: Declare variable 'shout' with the value 'Shout' so it's available to `justShout` and `shoutItAllOut` functions
+//1.delear global shoult
+var shout;
 function justShout() {
   console.log(shout + ", " + shout);
   return;
@@ -20,6 +23,7 @@ function sayLions() {
 }
 
 function sayTigers() {
+  var animal=''
   console.log("and " + animal + " and "); 
   return;
 }
@@ -28,7 +32,7 @@ function sayTigers() {
 var bears = "Bears";
 
 function sayBears() {
-    var bears = "Pandas";
+    // var bears = "Pandas"; //delete the local
     console.log(bears + "! OH MY!");
     return;
 }
@@ -38,9 +42,11 @@ sayTigers();
 sayBears();
 
 // TODO: The variable 'sing' should be declared once in the local scope.
-var sing = "Sing"; 
+// var sing = "Sing"; //make global to local scope
 
+//closure:function inside a function
 function singAlong() {
+  var sing = "Sing"; 
   console.log(sing + ",");
   var singASong = function () {
     console.log(sing + " a Song.");

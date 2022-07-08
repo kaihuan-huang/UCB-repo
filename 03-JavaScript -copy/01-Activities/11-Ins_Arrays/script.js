@@ -3,7 +3,7 @@ var name = "Andre";
 var pets = 3; 
 var isStudent = true;
 
-// To store groups of data in a single variable, we use arrays
+// To store groups of data in a single variable, we use arrays(we can put String, boolean...everything)
 var names = ["Andre", "Karl", "Rashida", "Olivia"];
 
 // The entire array can be accessed by using the array's name 
@@ -11,13 +11,16 @@ console.log(names);
 
 // To log a single element, we use the name of the array with the index in brackets
 console.log(names[1]); 
+//Karl
 
 // Arrays are zero-indexed, so the index of first element in the array is 0
 console.log(names[0]); 
+//Andre
 
 // We can also use index to replace data in an array
 // Returns "Olivia"
 console.log(names[3]);
+//Olivia
 
 //Replaces "Olivia" with "Carter"
 names[3] = "Carter"; 
