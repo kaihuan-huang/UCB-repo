@@ -22,13 +22,13 @@ var words = ["variable","array", "modulus", "object", "function", "string", "boo
 //输｜｜赢function 
 function init(){
     getWins();
-    getLosses();
+    getlosses();
 }
 
 //点击start button时 的startGame function：
 function startGame(){
     isWin = false;
-    timerCount = 30;
+    timerCount = 10;
     //Prevent start button from being clicked when round is in progress
     startButton.disabled = true;
     renderBlanks();
@@ -99,7 +99,7 @@ function setWins(){
 //Update lose count ...
 function setLosses(){
     lose.textContent = loseCounter;
-    localStorage.setItem("loseCOunt", loseCounter);
+    localStorage.setItem("loseCount", loseCounter);
 }
 
 //These function are used by init:
@@ -119,5 +119,75 @@ function getWins(){
 
 function getlosses(){
     var storedLosses = localStorage.getItem("loseCount");
-    
+    if (storedLosses === null){
+        loseCounter = 0;
+    }else{
+        loseCounter = storedLosses;
+    }
+    lose.textContent = loseCounter;
 }
+
+function checkWin(){
+    //If the word equals the blankLetters array when converted to string, set isWin true:
+    if (chosenWord === blanksLetters.join("")){
+        //This value is used in the timer function to test if win condition is met
+        isWin = true;
+    }
+}
+
+//Tests if guessed letter is in word and renders it to the screen
+function checkletters(letter){
+    var letterInWord = false;
+    for( var i = 0; i < numBlanks; i++){
+        if (chosenWord[i] === letter){
+            letterInWord = true;
+        }
+    }
+    if (letterInWord){
+        for(var j = 0; j < numBlanks; j++){
+            if (chosenWord[j] === letter){
+                blanksLetters[j] = letter;
+            }
+        }
+        wordBlank.textContent = blanksLetters.join(" ");
+    }
+}
+//Attach even Listener to document to listen for key even
+document.addEventListener("keydown", function(event){
+    //If the count is 0, exit function
+    if (timerCount === 0){
+        return;
+    }
+    //COnvert all keys to lower case
+    var key = event.key.toLowerCase();
+    var alphabetNumericCharacters = "abcdefghijklmnopqrstuvwxyz0123456789".split("");
+    //Test if key pushed is letter
+    if (alphabetNumericCharacters.includes(key)){
+        var letterGuessed = event.key;
+        checkletters(letterGuessed)
+        checkWin();
+    }
+})
+
+
+//Attach event listener to start button to call StartGame function on click
+startButton.addEventListener("click", startGame);
+
+//Calls init()so that it fires when page opened
+init();
+
+//Add reset button
+var resetButton = document.querySelector(".reset-button");
+
+function resetGame(){
+    //Reset win and loss counts
+    winCounter = 0;
+    loseCounter = 0;
+    //Renders win and loss counts and sets them into clients storage
+    setWins();
+    setLosses();
+}
+//Attaches event listener to button
+resetButton.addEventListener("click", resetGame);
+
+

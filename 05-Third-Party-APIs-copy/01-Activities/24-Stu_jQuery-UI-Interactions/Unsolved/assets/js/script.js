@@ -64,5 +64,9 @@ $(function () {
   });
 });
 
-// Add interaction here
-//
+//Sortable interaction 
+$(function () {
+  $('#skills-list').sortable({
+    Placeholder:'pretty'
+  });
+});

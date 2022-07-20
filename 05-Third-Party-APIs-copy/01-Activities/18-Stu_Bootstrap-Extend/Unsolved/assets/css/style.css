@@ -7,4 +7,19 @@
 }
 
 /* Add your custom class style definitions here */
+.custom-navbar{
+  background-color: var(--lightteal);
+}
+
+.navbar-nav:hover{
+  background-color: var(--brown);
+}
+
+.custom-jumbotron{
+  background-color:var(--teal);
+}
+
+.custom-btn{
+  background-color: var(--brown);
+}
 /* HINT: Apply CSS variables using `var(--brown)` syntax as your property value */

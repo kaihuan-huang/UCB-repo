@@ -16,3 +16,27 @@
 // TODO: Append the author element to the quote element
 
 // TODO: Append the quote element to the HTML element with an ID of `root` in `index.html`
+
+var rootEl = $('#root');
+
+var pEl = $('<p>');
+
+rootEl.append(pEl);
+
+pEl.text("~ Carol Dweck");
+
+pEl.addClass('plain');
+
+var quot = $('<h1>');
+
+quot.text("Love Challenges, Be Intrigued by Mistakes, Enjoy Effort, and Keep Learning.")
+
+quot.addClass('fancy');
+
+quot.append(pEl);
+
+rootEl.append(quot);
+
+
+
+

@@ -22,3 +22,6 @@ if(weekNum % 2) {
 }
 
 $("#4a").text(takeOut + ", because it's currently week " + weekNum);
+
+// all the different format:
+// https://momentjs.com/
