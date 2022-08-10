@@ -3,7 +3,10 @@ const songs = ['Bad Guy', 'The Wheels on the Bus', 'Friday'];
 
 for (const song of songs) {
   console.log(song);
+  console.log(`${songs[0]}'s chart position is ${song[1]}`)
 }
+//same as for each loop 
+songs.forEach(song => console.log(song));
 
 /* Output:
   Bad Guy

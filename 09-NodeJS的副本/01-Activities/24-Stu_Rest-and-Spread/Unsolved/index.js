@@ -2,6 +2,7 @@
 const songs = ['Creep', 'Everlong', 'Bulls On Parade', 'Song 2', 'What I Got'];
 
 // TODO: Which operator is being used here?
+//spreat operator : spreat all the values to newSongs, we can push() or pop() to bject
 const newSongs = [...songs];
 
 // TODO: What do you expect to be logged in the console?
@@ -11,6 +12,7 @@ console.log(newSongs);
 const addition = (x, y, z) => {
   const array = [x, y, z];
   // TODO: What does the reduce() method do?
+  //reduce() array method, 
   return array.reduce((a, b) => a + b, 0);
 };
 // TODO: What do you expect to be logged in the console?
@@ -18,11 +20,18 @@ console.log(addition(1, 2, 3));
 
 // TODO: What is this syntax that is being used as the parameter?
 const additionSpread = (...array) => {
-  return array.reduce((a, b) => a + b, 0);
+  return array.reduce((a, b) => a + b, 0); //cb, start value
 };
+
+const additionSpreadAvg = (...array) => {
+  return array.reduce((a, b) => a + b, 0) / array.length; //will retuen avg
+};
+
 
 // TODO: What do you expect to be logged in the console?
 console.log(additionSpread(1, 2, 3));
 
 // TODO: What do you expect to be logged in the console?
 console.log(additionSpread(1, 2, 3, 4, 100));
+
+console.log(additionSpreadAvg(1, 2, 3, 4, 100));

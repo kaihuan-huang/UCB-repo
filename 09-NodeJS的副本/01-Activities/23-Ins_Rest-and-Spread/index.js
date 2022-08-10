@@ -4,10 +4,10 @@ function add(x, y) {
 }
 console.log(add(1, 2, 3, 4, 5)); // => 3
 
-// 1. rest
+// 1. rest operator
 function add(...nums) {
   let sum = 0;
-  for (let num of nums) sum += num;
+  for (const num of nums) sum += num; // sum = sum + num
   return sum;
 }
 
@@ -28,3 +28,15 @@ const dragons = ["Drogon", "Viserion", "Rhaegal"];
 const weapons = ["dragonglass", ...dragons, "wildfire"]; // notice the spread operator ...dragons
 
 console.log(weapons); // prints ["dragonglass", "Drogon", "Viserion", "Rhaegal", "wildfire"]
+
+const person = {
+  name: "kaihuan",
+  house: "stack";
+}
+
+const personCopy = person;
+const personClone = { ...person }
+personCopy.name = 'John';
+
+console.log('person', person);
+console.log('personClone', personClone)
