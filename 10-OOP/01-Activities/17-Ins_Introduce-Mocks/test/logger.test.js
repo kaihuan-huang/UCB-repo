@@ -16,10 +16,11 @@ describe("Logger", () => {
     it("should print in black", () => {
       const log = new Logger();
       const message = "Hello world!";
-      const mock = jest.spyOn(console, "log");
-      mock.mockImplementation(() => {});
+      const mock = jest.spyOn(console, "log");//spyOn() find on the console object mocking the log() method
+      mock.mockImplementation(() => { });
 
       log.black(message);
+      log.cyan(message);
 
       expect(mock).toBeCalledWith(colors.black, message);
 
@@ -30,7 +31,7 @@ describe("Logger", () => {
       const log = new Logger();
       const message = "Hello world!";
       const mock = jest.spyOn(console, "log");
-      mock.mockImplementation(() => {});
+      mock.mockImplementation(() => { });
 
       log.red(message);
 
@@ -43,7 +44,7 @@ describe("Logger", () => {
       const log = new Logger();
       const message = "Hello world!";
       const mock = jest.spyOn(console, "log");
-      mock.mockImplementation(() => {});
+      mock.mockImplementation(() => { });
 
       log.green(message);
 
@@ -56,7 +57,7 @@ describe("Logger", () => {
       const log = new Logger();
       const message = "Hello world!";
       const mock = jest.spyOn(console, "log");
-      mock.mockImplementation(() => {});
+      mock.mockImplementation(() => { });
 
       log.yellow(message);
 
@@ -69,7 +70,7 @@ describe("Logger", () => {
       const log = new Logger();
       const message = "Hello world!";
       const mock = jest.spyOn(console, "log");
-      mock.mockImplementation(() => {});
+      mock.mockImplementation(() => { });
 
       log.blue(message);
 
@@ -82,7 +83,7 @@ describe("Logger", () => {
       const log = new Logger();
       const message = "Hello world!";
       const mock = jest.spyOn(console, "log");
-      mock.mockImplementation(() => {});
+      mock.mockImplementation(() => { });
 
       log.magenta(message);
 
@@ -95,7 +96,7 @@ describe("Logger", () => {
       const log = new Logger();
       const message = "Hello world!";
       const mock = jest.spyOn(console, "log");
-      mock.mockImplementation(() => {});
+      mock.mockImplementation(() => { });
 
       log.cyan(message);
 
@@ -108,7 +109,7 @@ describe("Logger", () => {
       const log = new Logger();
       const message = "Hello world!";
       const mock = jest.spyOn(console, "log");
-      mock.mockImplementation(() => {});
+      mock.mockImplementation(() => { });
 
       log.white(message);
 

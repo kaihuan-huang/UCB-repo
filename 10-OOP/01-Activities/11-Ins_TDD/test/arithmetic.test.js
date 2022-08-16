@@ -46,6 +46,7 @@ describe("Arithmetic", () => {
       const obj = new Arithmetic(9).minus(4);
 
       expect(obj instanceof Arithmetic).toEqual(true);
+      expect(obj.number).toEqual(6);
     });
 
     it("should return a new 'Arithmetic' object that has an updated 'number' value", () => {
