@@ -21,7 +21,7 @@ describe("MovieSearch", () => {
       const name = "Rocky";
 
       axios.get.mockReturnValue(
-        new Promise(function(resolve) {
+        new Promise(function (resolve) {
           resolve({ data: {} });
         })
       );

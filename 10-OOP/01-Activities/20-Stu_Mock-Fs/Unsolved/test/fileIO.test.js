@@ -1,9 +1,13 @@
+
 const FileIO = require('../fileIO');
 
 describe('FileIO', () => {
   describe('read', () => {
     it("should call fs.readFileSync with the passed in 'file' argument", () => {
-      // TODO: Your code here
+      const FileIO = new FileIO();
+      const file = "message.txt";
+
+      expect(fs.readFileSync).toEqual('')
     });
   });
 
