@@ -5,6 +5,11 @@ class Vehicle {
     this.sound = sound;
   }
 
+  useHorn() {
+    this.sound
+
+  }
+
   printInfo() {
     console.log(`This vehicle has ${this.numberOfWheels} wheels`);
     console.log(`This vehicle has an id of ${this.id}`);

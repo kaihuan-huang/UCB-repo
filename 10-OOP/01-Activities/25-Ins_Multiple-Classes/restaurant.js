@@ -26,7 +26,7 @@ class Restaurant {
 
         clearInterval(prepareInterval);
       } else {
-        const order = this.orders.shift();
+        const order = this.orders.shift(); //shift()
 
         console.log(`#${order.id} has been prepared.`);
       }

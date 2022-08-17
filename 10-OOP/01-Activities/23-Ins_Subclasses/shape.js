@@ -11,3 +11,5 @@ class Shape {
 }
 
 module.exports = Shape;
+
+//subclass

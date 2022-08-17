@@ -1,11 +1,11 @@
 const Shape = require('./shape');
 
-class Rectangle extends Shape {
+class Rectangle extends Shape { //extens key words
   constructor(sideA, sideB) {
     const area = sideA * sideB;
     const perimeter = sideA * 2 + sideB * 2;
 
-    super(area, perimeter);
+    super(area, perimeter); //calling the shape.js
     this.sideA = sideA;
     this.sideB = sideB;
   }
