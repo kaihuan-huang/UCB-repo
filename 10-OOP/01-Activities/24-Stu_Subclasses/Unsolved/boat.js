@@ -2,9 +2,17 @@
 const Vehicle = require('./vehicle');
 // TODO: Create a `Boat` class that extends the `Vehicle` class
 class Boat extends Vehicle {
-  constructor(id, numberOfWheels, sound) {
-    this.numberOfWheels = 0;
-    this.sound = 'bowm';
+  constructor(id, type, crew) {
+    super(id, 0, 'bowm');
+    this.type = type;
+    this.crew = crew;
+
+  }
+
+  crewSoundOff() {
+    this.crew.forEach((member => {
+      console.log(`${member} reporting for duty`);
+    }))
   }
 
 }
@@ -21,3 +29,4 @@ console.log('---BOAT---');
 boat.printInfo();
 boat.useHorn();
 boat.crewSoundOff();
+boat.useHorn();
