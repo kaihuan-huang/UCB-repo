@@ -4,7 +4,7 @@ CREATE DATABASE course_db;
 USE course_db;
 
 CREATE TABLE courses (
-  id INT NOT NULL,
+  id INT NOT NULL AUTO_INCREMENT,
   course_title VARCHAR(30) NOT NULL,
   course_description TEXT NOT NULL,
   active BOOLEAN NOT NULL,

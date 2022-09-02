@@ -8,5 +8,5 @@ CREATE TABLE courses (
   course_title VARCHAR(30) NOT NULL,
   course_description TEXT NOT NULL,
   active BOOLEAN NOT NULL,
-  date_updated DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL
+  date_updated DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL 
 );
