@@ -10,6 +10,7 @@ Book.init(
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
+      
     },
     title: {
       type: DataTypes.STRING,
@@ -35,6 +36,13 @@ Book.init(
       type: DataTypes.BOOLEAN,
       defaultValue: true
     },
+    reader_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'reader',
+        key: 'id',
+      }
+    }
   },
   {
     sequelize,
@@ -42,6 +50,7 @@ Book.init(
     freezeTableName: true,
     underscored: true,
     modelName: 'book'
+
   }
 );
 

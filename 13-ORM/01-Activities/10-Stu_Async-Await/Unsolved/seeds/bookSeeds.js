@@ -6,22 +6,20 @@ const Library = require('../models/Library');
 const bookSeedData = require('./bookSeedData.json');
 const librarySeedData = require('./librarySeedData.json');
 
-// TODO Use async / await to Refactor the seedDatabase function below
-const seedDatabase = () => {
-  return sequelize.sync({ 
-    force: true 
-  })
-  .then(() => {
-    Book.bulkCreate(bookSeedData)
-    .then(() => {
-      Library.bulkCreate(librarySeedData)
-      .then(() => {
-        console.log('All Seeds Planted'); 
-      });
-    });
-  });
+// Use async / await to Refactor the seedDatabase function below
+const seedDatabase = async() => {
+  try {
+    await sequelize.sync({ 
+      force: true 
+    })
+    await Book.bulkCreate(bookSeedData)
+ 
+    await Library.bulkCreate(librarySeedData)
 
-  process.exit(0);
+    console.log('All Seeds Planted'); 
+  }catch (err) {
+    process.exit(0);
+  }
 };
 
 seedDatabase();

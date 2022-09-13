@@ -15,3 +15,5 @@ app.use(routes);
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
+
+//http://localhost:3001/api/users/login

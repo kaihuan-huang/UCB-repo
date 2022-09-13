@@ -8,6 +8,17 @@ router.get('/', async (req, res) => {
     const readerData = await Reader.findAll({
       include: [{ model: LibraryCard }, { model: Book }],
       // TODO: Add a sequelize literal to get a count of short books
+      attributes: {
+        include: [
+          [
+            // Use plain SQL to add up the total mileage
+            sequelize.literal(
+             '(SELECT COUNT(*) FROM book WHERE pages BETWEEN 100 and300)'
+            ),
+            'numOfShortBook',
+          ],
+        ],
+      },
     });
     res.status(200).json(readerData);
   } catch (err) {
@@ -21,6 +32,17 @@ router.get('/:id', async (req, res) => {
     const readerData = await Reader.findByPk(req.params.id, {
       include: [{ model: LibraryCard }, { model: Book }],
       // TODO: Add a sequelize literal to get a count of short books
+      attributes: {
+        include: [
+          [
+            // Use plain SQL to add up the total mileage
+            sequelize.literal(
+              '(SELECT COUNT(*) FROM book WHERE pages BETWEEN 100 and300)'
+            ),
+            'numOfShortBook',
+          ],
+        ],
+      },
     });
 
     if (!readerData) {
@@ -38,7 +60,7 @@ router.get('/:id', async (req, res) => {
 router.post('/', async (req, res) => {
   try {
     const readerData = await Reader.create(req.body);
-    res.status(200).json(readerData);
+    res.status(200).json(readerData);``
   } catch (err) {
     res.status(400).json(err);
   }

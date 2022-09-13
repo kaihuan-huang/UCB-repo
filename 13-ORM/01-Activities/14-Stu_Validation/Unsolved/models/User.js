@@ -15,18 +15,27 @@ User.init(
     },
     username: {
       type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        isAlphanumeric: true,
+      }
     },
     email: {
       type: DataTypes.STRING,
+       // prevents duplicate email addresses in DB
       unique: true,
+      // checks for email format (foo@bar.com)
       validate: {
         isEmail: true,
       },
     },
     password: {
       type: DataTypes.STRING,
+      validate{
+        len: 
+      }
     },
-  },
+  }
   {
     sequelize,
     timestamps: false,
