@@ -1,6 +1,6 @@
 const path = require('path');
 const express = require('express');
-// Import express-session
+// Import express-session 
 const session = require('express-session');
 const exphbs = require('express-handlebars');
 
@@ -11,7 +11,7 @@ const helpers = require('./utils/helpers');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// Set up sessions
+// Set up sessions to hash to see the cookie
 const sess = {
   secret: 'Super secret secret',
   resave: false,

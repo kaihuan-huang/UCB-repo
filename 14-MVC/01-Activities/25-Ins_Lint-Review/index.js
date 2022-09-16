@@ -7,4 +7,4 @@ const sayHello = () => {
 };
 
 // Error: strings should use single quotes
-sayHello("hello");
+sayHello('hello');
