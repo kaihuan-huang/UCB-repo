@@ -7,16 +7,16 @@ function binarySearch(array, element) {
 
   while (start <= end) {
     let mid = Math.floor((start + end) / 2);
-
+    // console.log(mid)
     if (array[mid] === element) {
-      return;
+      return true;
     } else if (array[mid] < element) {
       start = mid + 1;
     } else {
       end = mid - 1;
     }
   }
-  return;
+  return false;
 }
 
 console.log(binarySearch(arr, 7));

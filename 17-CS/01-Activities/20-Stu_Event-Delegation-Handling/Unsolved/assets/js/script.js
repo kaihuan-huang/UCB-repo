@@ -1,20 +1,20 @@
 const buttons = document.getElementsByTagName('button');
 
 const clickHandler = function () {
-// TODO: Add a comment describing the purpose of this variable.
+// Sets the value to 0
   let count = 0;
 
-  // TODO: Add a comment describing what is happening. 
+  //return a inner function which creates closure
   return function () {
   
-   // TODO: Add a comment describing how this variable is being scoped. 
+   //Increase  the locally scoped 'count' variable by one
     count++;
-   // TODO: Add a comment describing how we are using the 'count' variable.
+   // Use a template literal to display the 'count' variable onto the button elemrnt
     this.textContent = `Clicks: ${count}`;
   };
 };
 
-// TODO: Add a comment describing the purpose of this loop.
+// Adds an event listener to each individual button
 for (let i = 0; i < buttons.length; i++) {
   buttons[i].addEventListener('click', clickHandler());
 }

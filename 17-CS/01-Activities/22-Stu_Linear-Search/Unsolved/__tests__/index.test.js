@@ -1,4 +1,7 @@
+
+// import the { linearSearch }
 const { linearSearch } = require('../index');
+
 
 test('linearSearch is a defined function', () => {
   expect(typeof linearSearch).toEqual('function');
