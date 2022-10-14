@@ -1,3 +1,4 @@
+const { response } = require('express');
 const express = require('express');
 const mongodb = require('mongodb').MongoClient;
 
@@ -46,8 +47,15 @@ app.use(express.json());
 
 // TODO: Update route to use cursor methods
 app.get('/read', (req, res) => {
+  console.log('res',response)
   db.collection('numberList')
     .find()
+    //returned in descending order using MongoDB methods.
+    .sort({ number: -1 })
+    //he results are limited to five documents.
+    .limit(5)
+    //contain the largest five numbers are skipped.
+    .skip(5)
     .toArray((err, results) => {
       if (err) throw err;
       res.send(results);
