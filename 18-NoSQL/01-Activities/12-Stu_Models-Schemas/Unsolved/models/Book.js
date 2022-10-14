@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-// TODO: Add a comment describing the functionality of the code below
+// Create a new instance of the Mongoose schema to define shape of each document
 const bookSchema = new mongoose.Schema({
   title: { type: String, required: true },
   author: { type: String, required: false },
@@ -11,12 +11,14 @@ const bookSchema = new mongoose.Schema({
   lastAccessed: { type: Date, default: Date.now },
 });
 
-// TODO: Add a comment describing the functionality of the code below
+// Using mongoose.model() to compile a model based on the schema
+// 'Book' is the name of the model
+// bookSchema is the name of the schema we are using to create a new instance of the model
 const Book = mongoose.model('Book', bookSchema);
 
 const handleError = (err) => console.error(err);
 
-// TODO: Add a comment describing the functionality of the code below
+// We use the model to create individual documents that have the properties as defined in our schema
 Book.create(
   {
     title: 'Diary of Anne Frank',
@@ -29,15 +31,13 @@ Book.create(
   (err) => (err ? handleError(err) : console.log('Created new document'))
 );
 
-// TODO: Add a comment describing the difference between this instance being created
-// and the instance that was created above
+// create individual documents that have the properties with title and author
 Book.create(
   { title: 'Oh the Places You Will Go!', author: 'Dr. Seuss' },
   (err) => (err ? handleError(err) : console.log('Created new document'))
 );
 
-// TODO: Add a comment describing the difference between this instance being created
-// and the instance that was created above
+// create individual documents that have the properties with title and author
 Book.create({ title: 'Harold and the Purple Crayon' }, (err) =>
   err ? handleError(err) : console.log('Created new document')
 );

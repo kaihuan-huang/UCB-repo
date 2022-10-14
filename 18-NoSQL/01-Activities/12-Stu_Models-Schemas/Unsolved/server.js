@@ -1,6 +1,6 @@
 const express = require('express');
 const db = require('./config/connection');
-// TODO: Add a comment describing the functionality of the code below
+// import Book.js from models
 const { Book } = require('./models');
 
 const PORT = process.env.PORT || 3001;
@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.get('/all-books', (req, res) => {
-  // TODO: Add a comment describing the functionality of the code below
+  // Using model in route to find all documents that are instances of that model
   Book.find({}, (err, result) => {
     if (err) {
       res.status(500).send({ message: 'Internal Server Error' });
