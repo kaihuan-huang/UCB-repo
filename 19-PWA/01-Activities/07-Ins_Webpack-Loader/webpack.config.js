@@ -14,13 +14,13 @@ module: {
       test: /\.css$/i,
       use: ['style-loader', 'css-loader'],
     },
-    {
+    {// testing js file
       test: /\.m?js$/,
       exclude: /(node_modules|bower_components)/,
       use: {
         loader: 'babel-loader',
         options: {
-          presets: ['@babel/preset-env']
+          presets: ['@babel/preset-env'] //Es6 down Es5
         }
       }
     },

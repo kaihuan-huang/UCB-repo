@@ -12,7 +12,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './index.html',
-      title: 'Webpack Plugin'
+      title: 'Kaihuan Huang Webpack Plugin'
     })
   ],
 module: {
@@ -25,7 +25,7 @@ module: {
       test: /\.m?js$/,
       exclude: /(node_modules|bower_components)/,
       use: {
-        loader: 'babel-loader',
+        loader: 'babel-loader', //Js to code readable, es6 down to es5
         options: {
           presets: ['@babel/preset-env']
         }

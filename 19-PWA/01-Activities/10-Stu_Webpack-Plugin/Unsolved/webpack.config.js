@@ -1,5 +1,8 @@
-// TODO: Implement the MiniCssExtractPlugin
+// Implement the MiniCssExtractPlugin
+//首先，您需要安装mini-css-extract-plugin：
+//npm install --save-dev mini-css-extract-plugin
 
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
@@ -16,12 +19,13 @@ module.exports = {
       template: './index.html',
       title: 'Webpack Plugin',
     }),
+    new MiniCssExtractPlugin(),
   ],
   module: {
     rules: [
       {
         test: /\.css$/i,
-        use: ['style-loader', 'css-loader'],
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
@@ -39,4 +43,16 @@ module.exports = {
       },
     ],
   },
+  //way 2 here adding MiniCssExtractPlugin
+/*
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+optimization: {
+  minimizer: [
+    new CssMinimizerPlugin()
+  ],
+  minimize: true
+}
+*/
+// In the terminal runz; npm install --save-dev mini-css-extract-plugin
 };
+
