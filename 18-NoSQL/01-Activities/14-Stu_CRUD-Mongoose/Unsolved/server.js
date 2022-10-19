@@ -60,10 +60,10 @@ app.delete('/find-one-delete/:genre', (req, res) => {
 });
 
 //Update
-app.post('/find-one-update/:genre', (req, res) => {
+app.post('/find-one-update/:old/:new', (req, res) => {
   Genre.findOneAndUpdate(
-    {name: "Kids"},
-    {name: req.params.genre }, 
+    {name: req.params.old},
+    {name: req.params.new }, 
     {new: true}, 
     (err, result) => {
     if (result) {
@@ -83,4 +83,4 @@ db.once('open', () => {
   app.listen(PORT, () => {
     console.log(`API server running on port ${PORT}!`);
   });
-});
+})

@@ -9,6 +9,6 @@ const {
 router.route('/').get(getTags).post(createTag);
 
 // /api/users/:userId
-router.route('/:userId').get(getSingleTag);
+router.route('/:tagId').get(getSingleTag);
 
 module.exports = router;
