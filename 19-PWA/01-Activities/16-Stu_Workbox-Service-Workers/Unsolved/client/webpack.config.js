@@ -3,6 +3,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 
 //TODO: Add WorkboxPlugin with GenerateSW class
+const W
 
 module.exports = {
   mode: 'development',
