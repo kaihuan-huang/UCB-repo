@@ -22,8 +22,20 @@ module.exports = () => {
       new GenerateSW(),
       new WebpackPwaManifest({
         // TODO: Create a manifest.json:
+        name: "My Progressive Web Application",
+        short_name: "This is cool",
+        description: "My awesome Progressive Web App!",
+        background_color: "#FFFFFF",
+        crossorigin: "use-credentials", //can be null, use-credentials or anonymous
+        start_url: "./",
+        publicPath: "./",
+        icons: [
+          {
+            src: path.resolve("assets/images/logo.png"),
+            sizes: [96, 128, 192, 256, 384, 512], // multiple sizes
+          },
+        ],
       }),
-     
     ],
 
     module: {
