@@ -41,7 +41,7 @@ function Form() {
           value={lastName}
           name="lastName"
           onChange={handleInputChange}
-          type="text"
+          type="password"
           placeholder="Last Name"
         />
         <button type="button" onClick={handleFormSubmit}>
