@@ -20,7 +20,7 @@ const resolvers = {
   },
   // Define the functions that will fulfill the mutations
   Mutation: {
-    addSchool: async (parent, { name, location, studentCount }) => {
+    addSchool: async (_parent, { name, location, studentCount }) => {
       // Create and return the new School object
       return await School.create({ name, location, studentCount });
     },
